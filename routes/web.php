@@ -13,3 +13,5 @@ Route::resource('attendance','Api\AttendancesController')
 ->only(['index','show','store']);
 
 Route::put('attendances/{attendance}/report','Api\ReportAttendancesController@update');
+
+Route::get('/', '\App\Http\Controllers\AttendancesController@index')->name('home');
